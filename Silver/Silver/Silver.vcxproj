@@ -20,6 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="silver_core.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="silver_core.h" />
+    <ClInclude Include="silver_inc.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5f7254ae-61da-4bd4-8727-b796c7f28a2d}</ProjectGuid>
