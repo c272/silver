@@ -5,7 +5,7 @@
 //Including core includes.
 #include "silver_inc.h"
 
-//Wrapping all functions in the SLVR namespace.
+//All functions are wrapped in the SLVR namespace.
 //All documentation for class functions is contained within CPP files, and not in the header.
 
 // SECTION 0
@@ -26,10 +26,11 @@ namespace slvr {
 	//"Window" class, for housing SDL and OGL window data.
 	class Window {
 	public:
-		Window(std::string name, int height, int width, bool centered);
+		Window(std::string name, int width, int height, bool centered);
 		~Window();
 		SDL_Window* getWindow();
 		SLVR_KEY poll();
+		void renderTest();
 	private:
 		SDL_Event quitEvent;
 		SDL_Window* winlocation = NULL;

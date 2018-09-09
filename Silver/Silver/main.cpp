@@ -13,10 +13,8 @@ int main(int argc, char* argv[]) {
 			quit = true;
 		}
 		else {
-			//Rendering blue screen.
-			glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT);
-			SDL_GL_SwapWindow(win.getWindow());
+			//Test render.
+			win.renderTest();
 		}
 	}
 	

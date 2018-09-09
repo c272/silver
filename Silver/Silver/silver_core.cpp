@@ -32,17 +32,17 @@ void slvr::slInitBasic() {
 
 ///The main window of Silver, must be started to display things on screen.
 ///Parameters: (std::string [nameofwindow], int [heightofwindow], int [widthofwindow], OPTIONAL int [iscentered=false])
-slvr::Window::Window(std::string name, int height, int width, bool centered = false) {
+slvr::Window::Window(std::string name, int width, int height, bool centered = false) {
 	//Starting SDL and OpenGL.
 	slvr::slInitBasic();
 
 	//Creating window and GLContext.
 	//Checking whether to create as SDL_WINDOWPOS_CENTERED or SDL_WINDOWPOS_UNDEFINED.
 	if (centered) {
-		winlocation = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, height, width, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
+		winlocation = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
 	}
 	else {
-		winlocation = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, height, width, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
+		winlocation = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
 	}
 
 	//GLContext being addressed into class.
@@ -93,5 +93,22 @@ SLVR_KEY slvr::Window::poll() {
 	}
 	else {
 		return NOKEY;
+	}
+}
+
+///slvr::Window::renderTest()
+///Renders a basic test card to check the window is working correctly.
+///Parameters: ()
+void slvr::Window::renderTest() {
+	if (slvr::isGlInitialized == true && winlocation != NULL && glContextLocation!=NULL) {
+		//Everything's setup already, render test to screen now.
+		glClearColor(0.0f, 0.0f, 0.7f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		//Rendering.
+		SDL_GL_SwapWindow(winlocation);
+	}
+	else {
+		std::cout << "ERROR: Cannot render test card, GL is not initialized, or init() function has not been run.\n";
 	}
 }
