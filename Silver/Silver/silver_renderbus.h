@@ -13,5 +13,6 @@ namespace slvr {
 
   //Adding pipeline functions within the namespace.
   void guiSortPipeline();
+  void guiInitPipeline();
 }
 #endif
