@@ -1,6 +1,8 @@
 //Including SILVER_CORE header and includes.
 #include "silver_inc.h"
 #include "silver_core.h"
+#include "silver_renderbus.h"
+#include "silver_primitive.h"
 
 //  SECTION 0
 //  GLOBAL DECLARATION
