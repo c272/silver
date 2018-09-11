@@ -31,7 +31,7 @@ void slvr::slInitBasic() {
 }
 
 ///The main window of Silver, must be started to display things on screen.
-///Parameters: (std::string [nameofwindow], int [heightofwindow], int [widthofwindow], OPTIONAL int [iscentered=false])
+///Parameters: (std::string [nameofwindow], int [widthofwindow], int [heightofwindow], OPTIONAL int [iscentered=false])
 slvr::Window::Window(std::string name, int width, int height, bool centered = false) {
 	//Starting SDL and OpenGL.
 	slvr::slInitBasic();
