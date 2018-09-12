@@ -1,4 +1,4 @@
-# Render Bus (GUI)
+# Engine Theory - Render Bus (GUI)
 In Silver, the render bus for primitives is intended for use as a GUI system. This means that there are only 32 accessible layers for primitives to be drawn onto, as this allows for a large amount of complexity without completely flooding memory with a large vector. The message bus consists of two parts, a vector containing Primitives, and a vector containing integers.
 
 These two vectors are positionally linked, so when sorting, the integers that correspond to the Primitives in the first vector move in sync. This means that the render layers are eventually sorted from 0-31, 0 being the top layer and 31 being the bottom layer. After this, The pipeline that is called on "Render" in a window object will take the queue and render from the end of the list to the start of the list sequentially, each layer going above the one before it.
