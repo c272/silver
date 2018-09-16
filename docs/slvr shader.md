@@ -20,7 +20,7 @@ Parameters: ()
 
 &nbsp;
 
-***GLuint** getID()*
+**GLuint** *getID()*
 
 This returns the raw ID of the OpenGL graphics program. Should only really be used if doing some obscure feature using shader programs that is not supported by the built in class functions.
 
@@ -28,7 +28,7 @@ Parameters: ()
 
 &nbsp;
 
-***void** use()*
+**void** *use()*
 
 Makes the shader program contained within the class the current active OpenGL shader.
 
@@ -36,7 +36,7 @@ Parameters: ()
 
 &nbsp;
 
-***void** setUniformBool()*
+**void** *setUniformBool()*
 
 Sets a shader uniform property that is defined in the GLSL source file, of type boolean.
 
@@ -44,7 +44,7 @@ Parameters: (const std::string &name, bool value)
 
 &nbsp;
 
-***void** setUniformInt()*
+**void** *setUniformInt()*
 
 Sets a shader uniform property that is defined in the GLSL source file, of type integer..
 
@@ -52,7 +52,7 @@ Parameters: (const std::string &name, int value)
 
 &nbsp;
 
-***void** setUniformFloat()*
+**void** *setUniformFloat()*
 
 Sets a shader uniform property that is defined in the GLSL source file, of type float.
 
