@@ -101,7 +101,6 @@ slvr::Shader::~Shader() {
 ///Sets the shader as the current active shader in the engine/OGL.
 ///Parameters: ()
 void slvr::Shader::use() {
-	std::cout << "Enabled shader.\n";
 	glUseProgram(ID);
 }
 

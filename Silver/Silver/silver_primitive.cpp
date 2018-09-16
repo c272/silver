@@ -42,5 +42,4 @@ void slvr::Primitive::render() {
 
 	//Drawing using glDrawArrays.
 	glDrawArrays(GL_TRIANGLES, 0, 3);
-	std::cout << "Attempted to render triangles.\n";
 }
