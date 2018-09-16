@@ -1,5 +1,6 @@
 # slvr::Shader
 **Overview**
+
 A class that handles the loading and unloading of basic OpenGL shaders, using ifstreams and stringstreams. The raw OpenGL ID for the program can also be accessed.
 
 ## Methods
