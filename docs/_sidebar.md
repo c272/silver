@@ -5,6 +5,7 @@
 * Object Documentation
 	* [slvr::Window](slvr window.md)
 	* [slvr::Shader](slvr shader.md)
+	* [slvr::Primitive](slvr primitive.md)
 	
 * Function Documentation
 	* [slvr::slInitBasic](slinitbasic.md)
