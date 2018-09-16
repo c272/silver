@@ -21,10 +21,21 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="silver_core.cpp" />
+    <ClCompile Include="silver_primitive.cpp" />
+    <ClCompile Include="silver_renderbus.cpp" />
+    <ClCompile Include="silver_shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="silver_core.h" />
     <ClInclude Include="silver_inc.h" />
+    <ClInclude Include="silver_primitive.h" />
+    <ClInclude Include="silver_renderbus.h" />
+    <ClInclude Include="silver_shader.h" />
+    <ClInclude Include="silver_stbimage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.glsl" />
+    <None Include="vertex.glsl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5f7254ae-61da-4bd4-8727-b796c7f28a2d}</ProjectGuid>

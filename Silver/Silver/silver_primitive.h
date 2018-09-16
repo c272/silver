@@ -4,6 +4,7 @@
 
 //Including core includes.
 #include "silver_inc.h"
+#include "silver_shader.h"
 
 //All functions are wrapped in the SLVR namespace.
 //All documentation for class functions is contained within CPP files, and not in the header.
@@ -17,15 +18,14 @@ namespace slvr {
 	// Classes
 
 	//"Primitive" class, for drawing primitives.
-  class Primitive {
-  public:
-    ~Primitive();
-    void render();
-    bool setVertices(float* input);
-  private:
-    float* vertices = nullptr;
-    GLuint vbo;
-    GLuint vao;
-  }
+	class Primitive {
+	public:
+		Primitive(float* points, int arraySizeBytes, slvr::Shader* shader);
+		void render();
+	private:
+		GLuint vbo, vao;
+		slvr::Shader* shaderptr;
+	};
+}
 
 #endif

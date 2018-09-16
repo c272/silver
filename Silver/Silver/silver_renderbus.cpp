@@ -1,5 +1,6 @@
 //Including required Silver headers.
 #include "silver_inc.h"
+#include "silver_primitive.h"
 #include "silver_renderbus.h"
 
 // SECTION 0
@@ -16,6 +17,6 @@ void slvr::guiSortPipeline() {
 ///Called automatically by the Window's constructor, so should not need to ever be run manually.
 ///Parameters: ()
 void slvr::guiInitPipeline() {
-  std::vector<Primitive>* renderObjects = new std::vector<Primitive>;
+  std::vector<slvr::Primitive>* renderObjects = new std::vector<slvr::Primitive>;
   std::vector<int>* renderLayers = new std::vector<int>;
 }
