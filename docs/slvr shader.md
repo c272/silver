@@ -9,11 +9,15 @@ Constructor, takes the relative or complete path to the GLSL vertex shader and t
 
 Parameters: (char* vertexShaderPath, char* fragmentShaderPath)
 
+&nbsp;
+
 *~Shader()*
 
 Destructor, automatically called when the Shader object goes out of scope. Deletes the shader program.
 
 Parameters: ()
+
+&nbsp;
 
 ***GLuint** getID()*
 
@@ -21,11 +25,15 @@ This returns the raw ID of the OpenGL graphics program. Should only really be us
 
 Parameters: ()
 
+&nbsp;
+
 ***void** use()*
 
 Makes the shader program contained within the class the current active OpenGL shader.
 
 Parameters: ()
+
+&nbsp;
 
 ***void** setUniformBool()*
 
@@ -33,16 +41,22 @@ Sets a shader uniform property that is defined in the GLSL source file, of type 
 
 Parameters: (const std::string &name, bool value)
 
+&nbsp;
+
 ***void** setUniformInt()*
 
 Sets a shader uniform property that is defined in the GLSL source file, of type integer..
 
 Parameters: (const std::string &name, int value)
 
+&nbsp;
+
 ***void** setUniformFloat()*
 
 Sets a shader uniform property that is defined in the GLSL source file, of type float.
 
 Parameters: (const std::string &name, float value)
+
+&nbsp;
 
 > *Author's Note*: Function overloads will be added soon, for uniforms that contain 2 values and above, up to 4.
