@@ -10,8 +10,8 @@ Basic Contribution Rules
 5. Comment code well and keep it readable. No 200-line spaghetti fests, please.
 
 Advanced Contribution Rules
-*These only apply if you're creating a major new feature or addition to the project.*
 ---
+*These only apply if you're creating a major new feature or addition to the project.*
 1. Follow basic memory management protocol (eg. don't create a 1000 element long array on the stack) and remember to always delete allocated memory before the pointer. Features that do not follow this specific rule will always be declined.
 2. Try to make everything as class-based as possible (within reason), by using pointers as function parameters, and having getters/setters for your class variables.
 3. Wrap any classes in the "slvr::" namespace. This will stop pollution of the global namespace for projects.
