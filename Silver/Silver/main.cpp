@@ -1,10 +1,31 @@
 //Importing all Silver engine headers.
 #include "silver_inc.h"
 #include "silver_core.h"
+#include "silver_shader.h"
+#include "silver_primitive.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include "silver_stbimage.h"
 
-int main(int argc, char* argv[]) {  
+int main(int argc, char* argv[]) {
+	//Creating Silver window.
 	slvr::Window win("Window Title", 800, 600, false);
 	
+	//Initializing GLEW.
+	glewInit();
+
+	//Creating vertices for triangle.
+	float vertices[] = {
+		-0.5f, -0.5f, 0.0f,
+		0.5f, -0.5f, 0.0f,
+		0.0f,  0.5f, 0.0f
+	};
+
+	//Creating Silver shader.
+	slvr::Shader shader("vertex.glsl", "fragment.glsl");
+
+	//Creating Silver primitive.
+	slvr::Primitive primitive(vertices, sizeof(vertices), &shader);
+
 	bool quit = false;
 	while (!quit) {
 		//Check for quit.
@@ -13,8 +34,11 @@ int main(int argc, char* argv[]) {
 			quit = true;
 		}
 		else {
-			//Test render.
-			win.renderTest();
+			//Render primitive.
+			primitive.render();
+			
+			//Swap buffers.
+			SDL_GL_SwapWindow(win.getWindow());
 		}
 	}
 	

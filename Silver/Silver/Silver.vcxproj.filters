@@ -13,21 +13,56 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Shaders">
+      <UniqueIdentifier>{941f12fe-1f58-45ab-8c16-212bf7eeeb1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Silver Engine">
+      <UniqueIdentifier>{eb94e084-69f9-46f1-9d21-964299cab6b1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="silver_core.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Silver Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="silver_primitive.cpp">
+      <Filter>Source Files\Silver Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="silver_renderbus.cpp">
+      <Filter>Source Files\Silver Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="silver_shader.cpp">
+      <Filter>Source Files\Silver Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="silver_core.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Silver Engine</Filter>
     </ClInclude>
     <ClInclude Include="silver_inc.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Silver Engine</Filter>
     </ClInclude>
+    <ClInclude Include="silver_primitive.h">
+      <Filter>Source Files\Silver Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="silver_renderbus.h">
+      <Filter>Source Files\Silver Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="silver_shader.h">
+      <Filter>Source Files\Silver Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="silver_stbimage.h">
+      <Filter>Source Files\Silver Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertex.glsl">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="fragment.glsl">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

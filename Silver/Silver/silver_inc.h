@@ -4,10 +4,12 @@
 
 //Including all required Silver dependencies.
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include <stdio.h>
-#include <SDL.h>
-#include <glew.h>
 #include <string>
 #include <vector>
+#include <SDL.h>
+#include <glew.h>
 
 #endif
