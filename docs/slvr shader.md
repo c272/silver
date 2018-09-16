@@ -7,7 +7,7 @@ A class that handles the loading and unloading of basic OpenGL shaders, using if
 
 Constructor, takes the relative or complete path to the GLSL vertex shader and the GLSL fragment shader.
 
-Parameters: (char* vertexShaderPath, char* fragmentShaderPath)
+Parameters: (char\* vertexShaderPath, char\* fragmentShaderPath)
 
 &nbsp;
 
