@@ -24,6 +24,7 @@
     <ClCompile Include="silver_primitive.cpp" />
     <ClCompile Include="silver_renderbus.cpp" />
     <ClCompile Include="silver_shader.cpp" />
+    <ClCompile Include="silver_texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="silver_core.h" />
@@ -32,6 +33,7 @@
     <ClInclude Include="silver_renderbus.h" />
     <ClInclude Include="silver_shader.h" />
     <ClInclude Include="silver_stbimage.h" />
+    <ClInclude Include="silver_texture.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="fragment.glsl" />

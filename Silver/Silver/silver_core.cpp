@@ -17,7 +17,7 @@ bool slvr::isGlInitialized = false;
 void slvr::slInitBasic() {
 	//Checking if SDL/GLEW is already up and running.
 	if (slvr::isGlInitialized == false) {
-		std::cout << "Initializing.";
+		std::cout << "Initializing...\n";
 		//Initializing SDL.
 		if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
 			std::cout << "FATAL ERROR: SDL could not initialize. Please check dump for errors.\n";

@@ -3,8 +3,7 @@
 #include "silver_core.h"
 #include "silver_shader.h"
 #include "silver_primitive.h"
-#define STB_IMAGE_IMPLEMENTATION
-#include "silver_stbimage.h"
+#include "silver_texture.h"
 
 int main(int argc, char* argv[]) {
 	//Creating Silver window.
@@ -25,6 +24,9 @@ int main(int argc, char* argv[]) {
 
 	//Creating Silver primitive.
 	slvr::Primitive primitive(vertices, sizeof(vertices), &shader);
+
+	//Testing new Texture class.
+	slvr::Texture texture("D:\\Files\\Programming\\GitHub\\Silver\\silver\\Silver\\Silver\\bg.jpg");
 
 	bool quit = false;
 	while (!quit) {
