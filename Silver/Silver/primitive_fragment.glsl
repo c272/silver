@@ -1,4 +1,6 @@
 #version 330 core
+in vec3 colour;
+in vec2 texpos;
 out vec4 FragColour;
 
 void main() {
