@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
 	};
 
 	//Creating Silver shader.
-	slvr::Shader shader("vertex.glsl", "fragment.glsl");
+	slvr::Shader shader("primitive_vertex.glsl", "primitive_fragment.glsl");
 
 	//Creating Silver primitive.
 	slvr::Primitive primitive(vertices, sizeof(vertices), &shader);

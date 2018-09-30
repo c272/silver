@@ -26,7 +26,7 @@ slvr::Primitive::Primitive(float* points, int arraySizeBytes, slvr::Shader* shad
 	glBufferData(GL_ARRAY_BUFFER, arraySizeBytes, points, GL_STATIC_DRAW);
 
 	//Setting the attribute vertex data to the right spot in the VBO.
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, arraySizeBytes/sizeof(float), GL_FLOAT, GL_FALSE, arraySizeBytes, (void*)0);
 	glEnableVertexAttribArray(0);
 
 	std::cout << "Constructed primitive, with VAO and VBO.\n";
@@ -41,5 +41,5 @@ void slvr::Primitive::render() {
 	shaderptr->use();
 
 	//Drawing using glDrawArrays.
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glDrawArrays(GL_TRIANGLES, 0, arraySizeBytes/sizeof(float));
 }
