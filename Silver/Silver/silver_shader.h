@@ -4,6 +4,7 @@
 
 //Including basics.
 #include "silver_inc.h"
+#include "silver_texture.h"
 
 //Defning Shader class.
 namespace slvr {
@@ -17,6 +18,7 @@ namespace slvr {
 		void setUniformBool(const std::string &name, bool value) const;
 		void setUniformInt(const std::string &name, int value) const;
 		void setUniformFloat(const std::string &name, float value) const;
+		void setTexture(slvr::Texture& tex);
 	private:
 		GLuint ID;
 	};

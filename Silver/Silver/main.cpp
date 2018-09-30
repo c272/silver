@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
 	slvr::Primitive primitive(vertices, sizeof(vertices), &shader);
 
 	//Testing new Texture class.
-	slvr::Texture texture("\\bg.jpg");
+	slvr::Texture texture(".\\bg.jpg");
 
 	bool quit = false;
 	while (!quit) {

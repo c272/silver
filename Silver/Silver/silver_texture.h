@@ -15,7 +15,7 @@ namespace slvr {
 		Texture(std::string path, int wrapmode=0, int filtermode=0);
 		//todo:
 		//~Texture();
-		//void bind();
+		//void use();
 		//void setTextureCoords(slvr::Shader shader, std::vector<int> coords);
 	private:
 		int width, height, channelNumber;
